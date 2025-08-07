@@ -1,0 +1,146 @@
+/* Education Section Styling */
+.education-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+    margin-left: 410px;
+    margin-bottom: 100px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-container h6 {
+    font-size: 16px;
+    color: #f5b44d;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.education-container h4 {
+    font-size: 32px;
+    color: #333333;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-family: 'Georgia', serif;
+}
+
+.education-content {
+    margin-top: 30px;
+}
+
+.education-table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.education-table thead {
+    background: linear-gradient(145deg, #000000, #000000);
+}
+
+.education-table th {
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.education-table td {
+    padding: 18px 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #333333;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 500;
+}
+
+.education-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.education-table tbody tr:hover {
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.education-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Animation for education table rows */
+.education-table tbody tr.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.education-table tbody tr:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.education-table tbody tr:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.education-table tbody tr:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark theme styles for Education section */
+.dark-theme .education-container {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .education-container h6 {
+    color: #f5b44d;
+}
+
+.dark-theme .education-container h4 {
+    color: #ffffff;
+}
+
+.dark-theme .education-table {
+    background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+}
+
+.dark-theme .education-table thead {
+    background: linear-gradient(145deg, #f5b44d, #e6a93c);
+}
+
+.dark-theme .education-table td {
+    color: #ffffff;
+    border-bottom: 1px solid #404040;
+}
+
+.dark-theme .education-table tbody tr:hover {
+    background: linear-gradient(145deg, #3d3d3d, #2d2d2d);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+

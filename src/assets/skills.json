@@ -1,0 +1,52 @@
+{
+    "skills": [
+        {
+            "id": 1,
+            "name": "HTML5",
+            "image": "html1.png",
+            "percentage": 90
+        },
+        {
+            "id": 2,
+            "name": "JavaScript",
+            "image": "js.png",
+            "percentage": 75
+        },
+        {
+            "id": 3,
+            "name": "React.js",
+            "image": "react.png",
+            "percentage": 50
+        },
+        {
+            "id": 4,
+            "name": "Java",
+            "image": "java.png",
+            "percentage": 90
+        },
+        {
+            "id": 5,
+            "name": "Python",
+            "image": "phyton.png",
+            "percentage": 60
+        },
+        {
+            "id": 6,
+            "name": "CSS",
+            "image": "css.png",
+            "percentage": 88
+        },
+        {
+            "id": 7,
+            "name": "GitHub",
+            "image": "GitHub.jpg",
+            "percentage": 70
+        },
+        {
+            "id": 8,
+            "name": "C Programming",
+            "image": "C Sticker.jpeg.png",
+            "percentage": 75
+        }
+    ]
+}

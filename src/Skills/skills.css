@@ -1,0 +1,650 @@
+/* Skills Section Styling */
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Flip Card Styles */
+.skill-flip-card {
+    perspective: 1000px;
+    height: 200px;
+    width: 100%;
+}
+
+.skill-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.skill-flip-card:hover .skill-flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.skill-flip-card-front,
+.skill-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-flip-card-front {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+.skill-flip-card-back {
+    background: linear-gradient(145deg, #030303, #000000);
+    transform: rotateY(180deg);
+    color: #ffffff;
+}
+
+/* Front Card Content */
+.skill-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Back Card Content */
+.percentage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.percentage-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.percentage-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.skill-name-back {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.learning-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover Effects */
+.skill-flip-card:hover .skill-flip-card-front {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .skill-flip-card {
+        height: 180px;
+    }
+
+    .skill-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .percentage-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .percentage-number {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .skill-flip-card {
+        height: 160px;
+    }
+
+    .skill-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .percentage-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .percentage-number {
+        font-size: 18px;
+    }
+
+    .skill-name-back {
+        font-size: 14px;
+    }
+}
+
+/* Dark theme styles for Skills section */
+.dark-theme .skill-flip-card-front {
+    background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .skill-flip-card-back {
+    background: linear-gradient(145deg, #f5b44d, #e6a93c);
+    color: #ffffff;
+}
+
+.dark-theme .skill-label {
+    color: #ffffff;
+}
+
+.dark-theme .skill-name-back {
+    color: #ffffff;
+}
+
+.dark-theme .learning-text {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-theme .skill-image {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .percentage-circle {
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-theme .percentage-number {
+    color: #ffffff;
+}
+
+.dark-theme .skill-flip-card:hover .skill-flip-card-front {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, #3d3d3d, #2d2d2d);
+}
+
+/* Perfect Mobile Responsive Design - Media Queries Only */
+
+/* Large Tablets and Small Laptops */
+@media (max-width: 1200px) {
+    .skills-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    .skill-flip-card {
+        height: 180px;
+    }
+
+    .skill-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .percentage-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .percentage-number {
+        font-size: 22px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    /* Skills section covers full mobile page */
+    #skill-section {
+        margin: 20px 0 !important;
+        padding: 30px 20px !important;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation: fadeInUp 0.8s ease-out 0.3s both;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 25px;
+        padding: 0 15px;
+        width: 100%;
+        flex: 1;
+        display: grid;
+        align-items: center;
+    }
+
+    .skill-flip-card {
+        height: 160px;
+        min-height: 160px;
+        width: 100%;
+        perspective: 1000px;
+        animation: fadeInUp 0.8s ease-out both;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    /* Stagger animations for skill cards */
+    .skill-flip-card:nth-child(1) {
+        animation-delay: 0.4s;
+    }
+
+    .skill-flip-card:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+
+    .skill-flip-card:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+
+    .skill-flip-card:nth-child(4) {
+        animation-delay: 0.7s;
+    }
+
+    .skill-flip-card:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+
+    .skill-flip-card:nth-child(6) {
+        animation-delay: 0.9s;
+    }
+
+    .skill-flip-card:nth-child(7) {
+        animation-delay: 1.0s;
+    }
+
+    .skill-flip-card:nth-child(8) {
+        animation-delay: 1.1s;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .skill-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .percentage-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .percentage-number {
+        font-size: 20px;
+    }
+
+    .skill-label {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .skill-name-back {
+        font-size: 14px;
+    }
+
+    .learning-text {
+        font-size: 11px;
+    }
+
+    /* Ensure skills container is properly positioned */
+    .about-container {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+        padding: 20px !important;
+    }
+
+    /* Enhanced flip functionality for mobile */
+    .skill-flip-card-inner {
+        transition: transform 0.6s ease;
+        transform-style: preserve-3d;
+    }
+
+    .skill-flip-card.flipped .skill-flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Touch-friendly flip */
+    .skill-flip-card:active .skill-flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 480px) {
+    #skill-section {
+        padding: 25px 15px !important;
+        min-height: 90vh;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .skill-flip-card {
+        height: 140px;
+        min-height: 140px;
+    }
+
+    .skill-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .percentage-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .percentage-number {
+        font-size: 18px;
+    }
+
+    .skill-label {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .skill-name-back {
+        font-size: 13px;
+    }
+
+    .learning-text {
+        font-size: 10px;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 360px) {
+    #skill-section {
+        padding: 20px 10px !important;
+        min-height: 85vh;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 8px;
+    }
+
+    .skill-flip-card {
+        height: 130px;
+        min-height: 130px;
+    }
+
+    .skill-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .percentage-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .percentage-number {
+        font-size: 16px;
+    }
+
+    .skill-label {
+        font-size: 11px;
+        margin-top: 5px;
+    }
+
+    .skill-name-back {
+        font-size: 12px;
+    }
+
+    .learning-text {
+        font-size: 9px;
+    }
+
+}
+
+/* Touch-friendly interactions for mobile */
+@media (hover: none) and (pointer: coarse) {
+    .skill-flip-card {
+        min-height: 120px;
+        touch-action: manipulation;
+    }
+
+    .skill-flip-card-inner {
+        transition: transform 0.6s ease;
+    }
+
+    .skill-flip-card:active .skill-flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .skill-image {
+        touch-action: manipulation;
+    }
+
+    /* Remove hover effects on touch devices */
+    .skill-flip-card-front:hover .skill-image {
+        transform: none;
+    }
+
+    .skill-flip-card-front:hover {
+        transform: none;
+    }
+
+    .skill-flip-card-front::before {
+        display: none;
+    }
+}
+
+/* Landscape orientation for skills */
+@media (max-width: 768px) and (orientation: landscape) {
+    #skill-section {
+        min-height: 70vh;
+        padding: 20px 15px !important;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .skill-flip-card {
+        height: 120px;
+        min-height: 120px;
+    }
+
+    .skill-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .percentage-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .percentage-number {
+        font-size: 16px;
+    }
+
+    .skill-label {
+        font-size: 10px;
+        margin-top: 4px;
+    }
+
+    .skill-name-back {
+        font-size: 11px;
+    }
+
+    .learning-text {
+        font-size: 8px;
+    }
+}
+
+/* High DPI displays for skills */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .skill-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .skill-flip-card-inner {
+        transition: none;
+    }
+
+    .skill-flip-card:hover .skill-flip-card-inner {
+        transform: none;
+    }
+
+    .skill-flip-card:active .skill-flip-card-inner {
+        transform: none;
+    }
+
+    .skill-image {
+        transition: none;
+    }
+
+    .skill-flip-card-front::before {
+        transition: none;
+    }
+
+    .skill-flip-card {
+        animation: none;
+    }
+}
+
+/* Mobile-specific flip behavior */
+@media (max-width: 768px) {
+    .skill-flip-card {
+        perspective: 800px;
+    }
+
+    .skill-flip-card-inner {
+        transition: transform 0.6s ease;
+    }
+
+    /* Add tap-to-flip functionality */
+    .skill-flip-card.flipped .skill-flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Ensure proper spacing and visibility */
+    .about-container {
+        margin: 20px 0 !important;
+        padding: 20px !important;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Fix any overflow issues */
+    .skills-content {
+        overflow: visible;
+        width: 100%;
+    }
+}
+
+/* Ensure skills are always visible and cover full page */
+@media (max-width: 768px) {
+    #skill-section {
+        margin: 20px 0 !important;
+        padding: 20px !important;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+        width: 100%;
+        flex: 1;
+        align-items: center;
+    }
+
+    .skill-flip-card {
+        width: 100%;
+        height: 160px;
+        min-height: 160px;
+    }
+}
