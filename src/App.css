@@ -268,12 +268,20 @@
         word-wrap: break-word !important;
     }
 
+    /* Portfolio container height adjustment for 360px */
+    .portfolio-container {
+        min-height: 100vh !important;
+        height: auto !important;
+        padding: 15px 0 !important;
+    }
+
     /* Ensure all sections are properly centered */
     .App {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         width: 100% !important;
+        min-height: 100vh !important;
     }
 
     /* All sections should be centered */
@@ -553,12 +561,20 @@
         word-wrap: break-word !important;
     }
 
+    /* Portfolio container height adjustment for 480px */
+    .portfolio-container {
+        min-height: 100vh !important;
+        height: auto !important;
+        padding: 20px 0 !important;
+    }
+
     /* Ensure all sections are properly centered */
     .App {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         width: 100% !important;
+        min-height: 100vh !important;
     }
 
     /* All sections should be centered */
@@ -581,8 +597,10 @@
     /* Portfolio container adjustments */
     .portfolio-container {
         flex-direction: column !important;
-        min-height: auto !important;
+        min-height: 100vh !important;
+        height: auto !important;
         width: 100% !important;
+        padding: 20px 0 !important;
     }
 
     /* Remove any fixed positioning issues */
