@@ -185,7 +185,16 @@
         width: 100% !important;
     }
 
-    .contact-info {
+    /* Contact content layout */
+    .contact-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px !important;
+        width: 100% !important;
+    }
+
+    /* Contact left (social links) */
+    .contact-left {
         width: calc(100% - 30px) !important;
         max-width: none !important;
         margin: 0 15px !important;
@@ -194,7 +203,8 @@
         overflow: hidden !important;
     }
 
-    .contact-form {
+    /* Contact right (form) */
+    .contact-right {
         width: calc(100% - 30px) !important;
         max-width: none !important;
         margin: 0 15px !important;
@@ -204,7 +214,7 @@
     }
 
     /* Social links in contact section - VERTICAL STACK */
-    .contact-info .social-links {
+    .social-contact-links {
         display: flex !important;
         flex-direction: column !important;
         gap: 12px !important;
@@ -214,25 +224,48 @@
         overflow: hidden !important;
     }
 
-    .contact-info .social-links a {
+    .social-contact-item {
         display: flex !important;
         align-items: center !important;
-        gap: 8px !important;
-        padding: 10px 15px !important;
-        border-radius: 6px !important;
+        gap: 12px !important;
+        padding: 12px 15px !important;
+        border-radius: 8px !important;
         text-decoration: none !important;
         transition: all 0.3s ease !important;
         width: 100% !important;
-        max-width: 200px !important;
-        justify-content: center !important;
+        max-width: 250px !important;
+        justify-content: flex-start !important;
         font-size: 14px !important;
         word-wrap: break-word !important;
+        cursor: pointer !important;
     }
 
-    .contact-info .social-links svg {
-        width: 18px !important;
-        height: 18px !important;
+    .social-icon-container {
+        width: 40px !important;
+        height: 40px !important;
         flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .social-text {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+        flex: 1 !important;
+        overflow: hidden !important;
+    }
+
+    .social-name {
+        font-weight: 600 !important;
+        font-size: 14px !important;
+    }
+
+    .social-handle {
+        font-size: 12px !important;
+        opacity: 0.8 !important;
+        word-wrap: break-word !important;
     }
 
     /* Ensure all sections are properly centered */
@@ -437,7 +470,16 @@
         width: 100% !important;
     }
 
-    .contact-info {
+    /* Contact content layout */
+    .contact-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+        width: 100% !important;
+    }
+
+    /* Contact left (social links) */
+    .contact-left {
         width: calc(100% - 40px) !important;
         max-width: none !important;
         margin: 0 20px !important;
@@ -446,7 +488,8 @@
         overflow: hidden !important;
     }
 
-    .contact-form {
+    /* Contact right (form) */
+    .contact-right {
         width: calc(100% - 40px) !important;
         max-width: none !important;
         margin: 0 20px !important;
@@ -456,7 +499,7 @@
     }
 
     /* Social links in contact section - VERTICAL STACK */
-    .contact-info .social-links {
+    .social-contact-links {
         display: flex !important;
         flex-direction: column !important;
         gap: 15px !important;
@@ -466,25 +509,48 @@
         overflow: hidden !important;
     }
 
-    .contact-info .social-links a {
+    .social-contact-item {
         display: flex !important;
         align-items: center !important;
-        gap: 10px !important;
-        padding: 12px 20px !important;
-        border-radius: 8px !important;
+        gap: 12px !important;
+        padding: 15px 20px !important;
+        border-radius: 10px !important;
         text-decoration: none !important;
         transition: all 0.3s ease !important;
         width: 100% !important;
-        max-width: 250px !important;
-        justify-content: center !important;
+        max-width: 280px !important;
+        justify-content: flex-start !important;
         font-size: 15px !important;
         word-wrap: break-word !important;
+        cursor: pointer !important;
     }
 
-    .contact-info .social-links svg {
-        width: 20px !important;
-        height: 20px !important;
+    .social-icon-container {
+        width: 45px !important;
+        height: 45px !important;
         flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .social-text {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3px !important;
+        flex: 1 !important;
+        overflow: hidden !important;
+    }
+
+    .social-name {
+        font-weight: 600 !important;
+        font-size: 15px !important;
+    }
+
+    .social-handle {
+        font-size: 13px !important;
+        opacity: 0.8 !important;
+        word-wrap: break-word !important;
     }
 
     /* Ensure all sections are properly centered */
@@ -578,10 +644,19 @@
     }
 
     /* Ensure contact form is properly stacked */
+    .contact-form {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
     .contact-form form {
         display: flex !important;
         flex-direction: column !important;
         gap: 15px !important;
+        width: 100% !important;
     }
 
     .contact-form input,
@@ -589,6 +664,25 @@
         width: 100% !important;
         padding: 12px !important;
         border-radius: 8px !important;
+        font-size: 14px !important;
+        word-wrap: break-word !important;
+    }
+
+    .contact-form textarea {
+        min-height: 100px !important;
+        resize: vertical !important;
+    }
+
+    .form-group {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .form-group label {
+        display: block !important;
+        margin-bottom: 5px !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
     }
 
     /* Additional table fixes for education section */
@@ -619,7 +713,7 @@
     }
 
     /* Social links vertical stacking */
-    .contact-info .social-links {
+    .social-contact-links {
         display: flex !important;
         flex-direction: column !important;
         gap: 12px !important;
@@ -628,18 +722,47 @@
         overflow: hidden !important;
     }
 
-    .contact-info .social-links a {
+    .social-contact-item {
         display: flex !important;
         align-items: center !important;
         gap: 10px !important;
-        padding: 10px 15px !important;
-        border-radius: 6px !important;
+        padding: 12px 15px !important;
+        border-radius: 8px !important;
         text-decoration: none !important;
         transition: all 0.3s ease !important;
         width: 100% !important;
-        max-width: 200px !important;
-        justify-content: center !important;
+        max-width: 220px !important;
+        justify-content: flex-start !important;
         font-size: 14px !important;
+        word-wrap: break-word !important;
+        cursor: pointer !important;
+    }
+
+    .social-icon-container {
+        width: 35px !important;
+        height: 35px !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .social-text {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+        flex: 1 !important;
+        overflow: hidden !important;
+    }
+
+    .social-name {
+        font-weight: 600 !important;
+        font-size: 14px !important;
+    }
+
+    .social-handle {
+        font-size: 12px !important;
+        opacity: 0.8 !important;
         word-wrap: break-word !important;
     }
 }
