@@ -280,11 +280,9 @@ body.dark-theme {
 
 /* Main Content */
 .main-content {
-    flex: 1;
     margin-left: 350px;
     margin-right: 400px;
     position: relative;
-    min-height: 100vh;
     background-color: #ffffff;
 }
 
