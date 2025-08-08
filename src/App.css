@@ -89,15 +89,15 @@
         height: 24px !important;
     }
 
-    /* Hero image positioned at right bottom with proper spacing */
+    /* Hero image positioned directly below social icons */
     .hero-image-right {
         position: relative !important;
         width: calc(100% - 30px) !important;
         height: 200px !important;
-        margin: 30px 15px 0 15px !important;
+        margin: 20px 15px 0 15px !important;
         border-radius: 0 !important;
         overflow: hidden !important;
-        order: 3 !important;
+        order: 2 !important;
     }
 
     .background-image {
@@ -382,15 +382,15 @@
         height: 26px !important;
     }
 
-    /* Hero image positioned at right bottom with proper spacing */
+    /* Hero image positioned directly below social icons */
     .hero-image-right {
         position: relative !important;
         width: calc(100% - 40px) !important;
         height: 250px !important;
-        margin: 35px 20px 0 20px !important;
+        margin: 25px 20px 0 20px !important;
         border-radius: 0 !important;
         overflow: hidden !important;
-        order: 3 !important;
+        order: 2 !important;
     }
 
     .background-image {
