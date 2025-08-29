@@ -216,6 +216,20 @@
     background: linear-gradient(145deg, #3d3d3d, #2d2d2d);
 }
 
+/* Dark theme styles for Skills section container */
+.dark-theme #skill-section {
+    background-color: #2d2d2d !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-theme #skill-section h6 {
+    color: #f5b44d !important;
+}
+
+.dark-theme #skill-section h4 {
+    color: #ffffff !important;
+}
+
 /* Perfect Mobile Responsive Design - Media Queries Only */
 
 /* Large Tablets and Small Laptops */
