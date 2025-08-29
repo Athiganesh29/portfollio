@@ -10,7 +10,7 @@
     margin-top: 150px;
     margin-left: 410px;
     margin-bottom: 100px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.6s ease, box-shadow 0.6s ease;
 }
 
 .education-container h6 {
@@ -73,7 +73,7 @@
 }
 
 .education-table tbody tr {
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
 }
 
 .education-table tbody tr:hover {

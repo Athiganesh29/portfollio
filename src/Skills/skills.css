@@ -40,7 +40,7 @@
     justify-content: center;
     background: linear-gradient(145deg, #ffffff, #f8f9fa);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
 }
 
 .skill-flip-card-front {
@@ -59,7 +59,7 @@
     height: 80px;
     object-fit: contain;
     margin-bottom: 15px;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
