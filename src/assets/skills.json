@@ -48,5 +48,23 @@
             "image": "C Sticker.jpeg.png",
             "percentage": 75
         }
+        ,{
+            "id": 9,
+            "name": "MySQL",
+            "image": "mysql.jpeg",
+            "percentage": 50
+        }
+        ,{
+            "id": 10,
+            "name": "Figma",
+            "image": "figma.jpeg",
+            "percentage": 60
+        }
+        ,{
+            "id": 11,
+            "name": "Photoshop",
+            "image": "photoshop.jpeg",
+            "percentage": 60
+        }
     ]
 }

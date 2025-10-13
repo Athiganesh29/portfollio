@@ -11,6 +11,9 @@ import phytonImg from '../assets/phyton.png'
 import cssImg from '../assets/css.png'
 import githubImg from '../assets/GitHub.jpg'
 import cStickerImg from '../assets/C Sticker.jpeg.png'
+import mysqlImg from '../assets/mysql.jpeg'
+import figmaImg from '../assets/figma.jpeg'
+import photoshopImg from '../assets/photoshop.jpeg'
 
 const Sklls = () => {
 
@@ -22,7 +25,10 @@ const Sklls = () => {
         'phyton.png': phytonImg,
         'css.png': cssImg,
         'GitHub.jpg': githubImg,
-        'C Sticker.jpeg.png': cStickerImg
+        'C Sticker.jpeg.png': cStickerImg,
+        'mysql.jpeg': mysqlImg,
+        'figma.jpeg': figmaImg,
+        'photoshop.jpeg': photoshopImg
     }
 
     // Map skills data with actual image imports
@@ -45,7 +51,7 @@ const Sklls = () => {
                                     <img src={skill.image} alt={skill.name} className="skill-image" />
                                     <span className="skill-label">{skill.name}</span>
                                 </div>
-                                
+
                                 {/* Back of card - Percentage */}
                                 <div className="skill-flip-card-back">
                                     <div className="percentage-container">
