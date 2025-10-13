@@ -1,13 +1,13 @@
 import React from 'react'
 import './About.css'
-import resumePDF from '../assets/athiganesh (2).pdf'
+import resumePDF from '../assets/Athi Ganesh Resume.pdf'
 
 const About = () => {
     const downloadResume = () => {
         const link = document.createElement('a')
         link.href = resumePDF
 
-        link.download = 'ATHI_GANESH_Resume.pdf'
+        link.download = 'Athi Ganesh Resume.pdf'
         document.body.appendChild(link)
         link.click()
         document.body.removeChild(link)
