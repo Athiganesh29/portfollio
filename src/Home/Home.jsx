@@ -5,6 +5,7 @@ import logo from '../assets/logo.png'
 
 function Home() {
     const [isDarkTheme, setIsDarkTheme] = useState(false)
+    const [typedName, setTypedName] = useState('')
 
     // Social media links
     const socialLinks = {
@@ -44,6 +45,45 @@ function Home() {
         { label: 'EDUCATION', id: 'education-section' },
         { label: 'CONTACT', id: 'contact-section' }
     ]
+
+    // Looping typewriter effect: type "Athi Ganesh", hold 10s, erase, repeat
+    useEffect(() => {
+        const fullName = 'Athi Ganesh K'
+        const TYPE_SPEED = 260   // ms per character while typing
+        const ERASE_SPEED = 120  // ms per character while erasing
+        const HOLD_TIME = 10000  // pause once fully typed (10s)
+        const RESTART_PAUSE = 500
+        let timeout
+        let cancelled = false
+
+        const type = (i) => {
+            if (cancelled) return
+            setTypedName(fullName.slice(0, i))
+            if (i < fullName.length) {
+                timeout = setTimeout(() => type(i + 1), TYPE_SPEED)
+            } else {
+                timeout = setTimeout(() => erase(fullName.length), HOLD_TIME)
+            }
+        }
+
+        const erase = (i) => {
+            if (cancelled) return
+            setTypedName(fullName.slice(0, i))
+            if (i > 0) {
+                timeout = setTimeout(() => erase(i - 1), ERASE_SPEED)
+            } else {
+                timeout = setTimeout(() => type(1), RESTART_PAUSE)
+            }
+        }
+
+        // Small initial delay so the typing is visible after the page settles
+        timeout = setTimeout(() => type(1), 700)
+
+        return () => {
+            cancelled = true
+            clearTimeout(timeout)
+        }
+    }, [])
 
     // Scroll animation functionality
     useEffect(() => {
@@ -140,9 +180,10 @@ function Home() {
             <div className="main-content">
                 {/* Home Section */}
                 <section id="home" className="hero-section scroll-fade-in">
-                    <h1 className="hero-title scroll-slide-left">
+                    <h1 className="hero-title">
                         I am<br />
-                        Athi Ganesh
+                        <span className="typed-name">{typedName}</span>
+                        <span className="type-cursor">|</span>
                     </h1>
                     <p className="hero-tagline">
                         Building reliable, automated deployment workflows on AWS with Docker &amp; Jenkins.
