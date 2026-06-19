@@ -18,8 +18,9 @@ const Contact = () => {
     }, [])
 
     const socialLinks = {
+        email: 'mailto:athiganesh273@gmail.com',
         linkedin: 'https://www.linkedin.com/in/adhi-ganesh/',
-        whatsapp: 'https://wa.me/9361201465',
+        whatsapp: 'https://wa.me/919361201465',
         instagram: 'https://instagram.com/_adhiiiiiiiiiiii.__',
         github: 'https://github.com/Athiganesh29'
     }
@@ -87,7 +88,7 @@ const Contact = () => {
 
     return (
         <>
-            <div id="contact-section" className='about-container scroll-fade-in'>
+            <div id="contact-section" className='section-card contact-card scroll-fade-in'>
                 <h6 className="scroll-slide-left">Get In Touch</h6>
                 <h4 className="scroll-slide-right">Contact Me</h4>
 
@@ -99,6 +100,19 @@ const Contact = () => {
                             <p>Feel free to reach out through any of these platforms</p>
 
                             <div className="social-contact-links">
+                                <div className="social-contact-item" onClick={() => handleSocialClick('email')}>
+                                    <div className="social-icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                                        </svg>
+                                    </div>
+                                    <div className="social-text">
+                                        <span className="social-name">Email</span>
+                                        <span className="social-handle">athiganesh273@gmail.com</span>
+                                    </div>
+                                </div>
+
                                 <div className="social-contact-item" onClick={() => handleSocialClick('linkedin')}>
                                     <div className="social-icon-container">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -143,7 +157,7 @@ const Contact = () => {
                                     </div>
                                     <div className="social-text">
                                         <span className="social-name">GitHub</span>
-                                        <span className="social-handle">@adhiganesh</span>
+                                        <span className="social-handle">@Athiganesh29</span>
                                     </div>
                                 </div>
                             </div>

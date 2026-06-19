@@ -1,70 +1,35 @@
 {
-    "skills": [
+    "categories": [
         {
-            "id": 1,
-            "name": "HTML5",
-            "image": "html1.png",
-            "percentage": 90
+            "name": "Cloud & DevOps",
+            "skills": [
+                { "name": "AWS", "icon": "devicon-amazonwebservices-plain-wordmark colored" },
+                { "name": "Docker", "icon": "devicon-docker-plain colored" },
+                { "name": "Jenkins", "icon": "devicon-jenkins-plain colored" },
+                { "name": "Git", "icon": "devicon-git-plain colored" },
+                { "name": "GitHub", "icon": "devicon-github-original" },
+                { "name": "Linux", "icon": "devicon-linux-plain colored" },
+                { "name": "Nginx", "icon": "devicon-nginx-original colored" }
+            ]
         },
         {
-            "id": 2,
-            "name": "JavaScript",
-            "image": "js.png",
-            "percentage": 75
+            "name": "Programming",
+            "skills": [
+                { "name": "Java", "icon": "devicon-java-plain colored" },
+                { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+                { "name": "C", "icon": "devicon-c-plain colored" }
+            ]
         },
         {
-            "id": 3,
-            "name": "React.js",
-            "image": "react.png",
-            "percentage": 50
-        },
-        {
-            "id": 4,
-            "name": "Java",
-            "image": "java.png",
-            "percentage": 90
-        },
-        {
-            "id": 5,
-            "name": "Python",
-            "image": "phyton.png",
-            "percentage": 60
-        },
-        {
-            "id": 6,
-            "name": "CSS",
-            "image": "css.png",
-            "percentage": 88
-        },
-        {
-            "id": 7,
-            "name": "GitHub",
-            "image": "GitHub.jpg",
-            "percentage": 70
-        },
-        {
-            "id": 8,
-            "name": "C Programming",
-            "image": "C Sticker.jpeg.png",
-            "percentage": 75
-        }
-        ,{
-            "id": 9,
-            "name": "MySQL",
-            "image": "mysql.jpeg",
-            "percentage": 50
-        }
-        ,{
-            "id": 10,
-            "name": "Figma",
-            "image": "figma.jpeg",
-            "percentage": 60
-        }
-        ,{
-            "id": 11,
-            "name": "Photoshop",
-            "image": "photoshop.jpeg",
-            "percentage": 60
+            "name": "Web Technologies",
+            "skills": [
+                { "name": "React.js", "icon": "devicon-react-original colored" },
+                { "name": "Node.js", "icon": "devicon-nodejs-plain colored" },
+                { "name": "Express.js", "icon": "devicon-express-original" },
+                { "name": "PostgreSQL", "icon": "devicon-postgresql-plain colored" },
+                { "name": "HTML5", "icon": "devicon-html5-plain colored" },
+                { "name": "CSS3", "icon": "devicon-css3-plain colored" }
+            ]
         }
     ]
 }

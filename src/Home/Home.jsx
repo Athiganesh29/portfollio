@@ -6,10 +6,10 @@ import logo from '../assets/logo.png'
 function Home() {
     const [isDarkTheme, setIsDarkTheme] = useState(false)
 
-    // Social media links - replace with your actual links
+    // Social media links
     const socialLinks = {
         linkedin: 'https://www.linkedin.com/in/adhi-ganesh/',
-        whatsapp: 'https://wa.me/9361201465',
+        whatsapp: 'https://wa.me/919361201465',
         instagram: 'https://instagram.com/_adhiiiiiiiiiiii.__',
         github: 'https://github.com/Athiganesh29'
     }
@@ -23,6 +23,28 @@ function Home() {
         document.body.classList.toggle('dark-theme')
     }
 
+    // Smooth-scroll helper shared by the sidebar and the mobile nav
+    const scrollToSection = (id) => {
+        if (id === 'home') {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            return
+        }
+        const el = document.getElementById(id)
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+    }
+
+    const navItems = [
+        { label: 'HOME', id: 'home' },
+        { label: 'ABOUT', id: 'about-section' },
+        { label: 'EXPERIENCE', id: 'experience-section' },
+        { label: 'PROJECTS', id: 'project-section' },
+        { label: 'SKILLS', id: 'skill-section' },
+        { label: 'EDUCATION', id: 'education-section' },
+        { label: 'CONTACT', id: 'contact-section' }
+    ]
+
     // Scroll animation functionality
     useEffect(() => {
         const observerOptions = {
@@ -34,14 +56,10 @@ function Home() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible')
-                } else {
-                    // Optional: remove class when scrolling back up
-                    // entry.target.classList.remove('visible')
                 }
             })
         }, observerOptions)
 
-        // Observe all elements with scroll animation classes
         const animatedElements = document.querySelectorAll('.scroll-fade-in, .scroll-slide-left, .scroll-slide-right, .scroll-scale-in')
         animatedElements.forEach(el => observer.observe(el))
 
@@ -67,93 +85,53 @@ function Home() {
                 )}
             </button>
 
+            {/* Compact navigation for mobile (hidden on desktop) */}
+            <nav className="mobile-nav">
+                <span className="mobile-nav-brand">Athi Ganesh</span>
+                <div className="mobile-nav-links">
+                    {navItems.map((item) => (
+                        <button
+                            key={item.id}
+                            className="mobile-nav-link"
+                            onClick={() => scrollToSection(item.id)}
+                        >
+                            {item.label}
+                        </button>
+                    ))}
+                </div>
+            </nav>
+
             {/* Left Sidebar Navigation */}
             <div className="sidebar">
                 <div className="profile-section">
                     <div className="profile-image">
                         <img
                             src={logo}
-                            alt="ATHI GANESH"
+                            alt="Athi Ganesh"
                             className="profile-pic"
                         />
                     </div>
                     <h2 className="profile-name">ATHI GANESH</h2>
                     <p className="profile-title">
-                        <span className="highlight">Final year student</span> Chennai
+                        <span className="highlight">DevOps &amp; Cloud Engineer</span> · Chennai
                     </p>
                 </div>
 
                 <nav className="navigation">
                     <ul className="menu-list">
-                        <li className="menu-item">
-                            <a onClick={() => {
-                                window.scrollTo({
-                                    top: 0,
-                                    behavior: 'smooth'
-                                })
-                            }} className="menu-link">HOME</a>
-                        </li>
-                        <li className="menu-item">
-                            <a onClick={() => {
-                                const aboutSection = document.getElementById('about-section')
-                                if (aboutSection) {
-                                    aboutSection.scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: 'start'
-                                    })
-                                }
-                            }} className="menu-link">ABOUT</a>
-                        </li>
-                        <li className="menu-item">
-                            <a onClick={() => {
-                                const projectSection = document.getElementById('project-section')
-                                if (projectSection) {
-                                    projectSection.scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: 'start'
-                                    })
-                                }
-                            }} className="menu-link">PROJECTS</a>
-                        </li>
-                        <li className="menu-item">
-                            <a onClick={() => {
-                                const skillSection = document.getElementById('skill-section')
-                                if (skillSection) {
-                                    skillSection.scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: 'start'
-                                    })
-                                }
-                            }} className="menu-link">SKILLS</a>
-                        </li>
-                        <li className="menu-item">
-                            <a onClick={() => {
-                                const educationSection = document.getElementById('education-section')
-                                if (educationSection) {
-                                    educationSection.scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: 'start'
-                                    })
-                                }
-                            }} className="menu-link">EDUCATION</a>
-                        </li>
-                        <li className="menu-item">
-                            <a onClick={() => {
-                                const contactSection = document.getElementById('contact-section')
-                                if (contactSection) {
-                                    contactSection.scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: 'start'
-                                    })
-                                }
-                            }} className="menu-link">CONTACT</a>
-                        </li>
+                        {navItems.map((item) => (
+                            <li className="menu-item" key={item.id}>
+                                <a onClick={() => scrollToSection(item.id)} className="menu-link">
+                                    {item.label}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
                 <div className="sidebar-footer">
                     <p className="copyright">
-                        © Copyright ©2024 All rights reserved | This template is made with ❤️ by ATHI GANESH
+                        © 2026 Athi Ganesh. Built with React &amp; ❤️
                     </p>
                 </div>
             </div>
@@ -164,8 +142,11 @@ function Home() {
                 <section id="home" className="hero-section scroll-fade-in">
                     <h1 className="hero-title scroll-slide-left">
                         I am<br />
-                        Adhi Ganesh
+                        Athi Ganesh
                     </h1>
+                    <p className="hero-tagline">
+                        Building reliable, automated deployment workflows on AWS with Docker &amp; Jenkins.
+                    </p>
 
                     {/* Social Media Icons */}
                     <div className="social-icons scroll-fade-in">
@@ -207,24 +188,20 @@ function Home() {
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
-
                         </button>
                     </div>
                 </section>
-
-
             </div>
 
             {/* Hero Image - Right Most Side */}
             <div className="hero-image-right">
                 <img
                     src={untitle}
-                    alt="Hero Background"
+                    alt="Athi Ganesh"
                     className="background-image"
                 />
             </div>
         </div>
-
     )
 }
 

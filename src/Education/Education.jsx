@@ -8,7 +8,7 @@ const Education = () => {
             school: "KCG College of Technology",
             board: "Anna University (Affiliated)",
             year: "2026",
-            cgpa: "8.4"
+            cgpa: "8.45"
         },
         {
             details: "12th Standard (HSSLC)",
@@ -28,7 +28,7 @@ const Education = () => {
 
     return (
         <>
-            <div id="education-section" className='about-container scroll-fade-in'>
+            <div id="education-section" className='section-card education-card scroll-fade-in'>
                 <h6 className="scroll-slide-left">My Education</h6>
                 <h4 className="scroll-slide-right">Academic Journey</h4>
                 

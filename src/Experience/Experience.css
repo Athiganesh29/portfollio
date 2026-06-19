@@ -1,0 +1,118 @@
+/* Experience Component CSS
+   Width/headers come from the shared .section-card (App.css). */
+
+.experience-timeline {
+    margin-top: 8px;
+}
+
+.experience-item {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding-left: 4px;
+}
+
+.experience-marker {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: #f5b44d;
+    box-shadow: 0 0 0 4px rgba(245, 180, 77, 0.2);
+    position: relative;
+}
+
+/* Vertical line for multiple items */
+.experience-item:not(:last-child) .experience-marker::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 24px);
+    background: #ececec;
+}
+
+.experience-body {
+    flex: 1;
+    padding-bottom: 8px;
+}
+
+.experience-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.experience-role {
+    font-size: 19px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.experience-period {
+    font-size: 13px;
+    font-weight: 600;
+    color: #f5b44d;
+    white-space: nowrap;
+}
+
+.experience-company {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    margin: 4px 0 14px;
+}
+
+.experience-type {
+    font-weight: 400;
+    color: #999;
+}
+
+.experience-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-points li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.experience-points li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #f5b44d;
+    font-weight: 700;
+}
+
+/* Dark theme */
+.dark-theme .experience-role {
+    color: #ffffff;
+}
+
+.dark-theme .experience-company {
+    color: #c4c4c4;
+}
+
+.dark-theme .experience-type {
+    color: #888;
+}
+
+.dark-theme .experience-points li {
+    color: #b0b0b0;
+}
+
+.dark-theme .experience-item:not(:last-child) .experience-marker::after {
+    background: #3a3a3a;
+}

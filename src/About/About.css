@@ -1,101 +1,97 @@
-/* About Component CSS */
-.about-container {
-    padding: 40px;
-    max-width: 870px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 150px;
-    margin-left: 370px;
-    margin-bottom: 100px;
-    transition: background-color 0.6s ease, box-shadow 0.6s ease;
-}
-
-/* Dark theme styles for About section */
-.dark-theme .about-container {
-    background-color: #2d2d2d;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.dark-theme .about-container h6 {
-    color: #f5b44d;
-}
-
-.dark-theme .about-container h4 {
-    color: #ffffff;
-}
-
-.dark-theme .about-container p {
-    color: #b0b0b0;
-}
-
-.dark-theme .download-cv {
-    background: linear-gradient(145deg, #f5b44d, #e6a93c);
-    color: #ffffff;
-}
-
-.dark-theme .download-cv:hover {
-    background: linear-gradient(145deg, #e6a93c, #d99a2b);
-    box-shadow: 0 6px 20px rgba(245, 180, 77, 0.3);
-}
-
-.about-container h6 {
-    color: #8a8a80;
-    font-size: 18px;
-    font-weight: 200;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    display: flex;
-    justify-content: start;
-}
-
-.about-container h4 {
-    color: #333333;
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    font-family: 'Georgia', serif;
-    display: flex;
-    justify-content: start;
-    letter-spacing: 4px;
-}
+/* About Component CSS
+   Layout/width/headers come from the shared .section-card (App.css).
+   This file only styles the inner content. */
 
 .about-content {
-    color: #000000;
-    font-size: 15px;
-    line-height: 1.4;
-    margin-top: 20px;
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 8px;
     font-weight: 400;
     text-align: left;
 }
 
-.about-content span {
-    color: #000000;
-    font-weight: 400;
-    font-size: 20px;
+.about-content p {
+    margin-bottom: 18px;
 }
 
+.about-content strong {
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+.dark-theme .about-content {
+    color: #c4c4c4;
+}
+
+.dark-theme .about-content strong {
+    color: #f5b44d;
+}
+
+/* Highlight stats */
+.about-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 28px 0 8px;
+}
+
+.highlight-stat {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 12px;
+    background: linear-gradient(145deg, #fafafa, #f1f1f1);
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.stat-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2b2b2b;
+    font-family: inherit;
+}
+
+.stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.dark-theme .highlight-stat {
+    background: linear-gradient(145deg, #2d2d2d, #222);
+    border-color: #3a3a3a;
+}
+
+.dark-theme .stat-value {
+    color: #ffffff;
+}
+
+.dark-theme .stat-label {
+    color: #a0a0a0;
+}
+
+/* Download button */
 .download-cv {
-    background: linear-gradient(135deg, #000000, #333333);
+    background: linear-gradient(135deg, #1a1a1a, #333333);
     color: #ffffff;
     border: none;
-    padding: 15px 30px;
+    padding: 14px 32px;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 30px;
-    font-size: 16px;
+    margin-top: 28px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(100px);
-    animation: slideInFromBottom 1s ease-out 0.1s forwards;
-    opacity: 0;
 }
 
 .download-cv::before {
@@ -114,10 +110,8 @@
 }
 
 .download-cv:hover {
-    background: linear-gradient(135deg, #333333, #000000);
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    color: #ffffff;
 }
 
 .download-cv:active {
@@ -125,9 +119,11 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes slideInFromBottom {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.dark-theme .download-cv {
+    background: linear-gradient(135deg, #f5b44d, #e6a93c);
+    color: #1a1a1a;
+}
+
+.dark-theme .download-cv:hover {
+    box-shadow: 0 8px 25px rgba(245, 180, 77, 0.3);
 }
