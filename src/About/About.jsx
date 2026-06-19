@@ -1,6 +1,6 @@
 import React from 'react'
 import './About.css'
-import resumePDF from '../assets/Athi_Ganesh_K_Resume.pdf'
+import resumePDF from '../assets/Athi_Ganesh_K_Resume_cloud.pdf'
 
 const About = () => {
     const downloadResume = () => {
