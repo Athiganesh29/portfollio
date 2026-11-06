@@ -5,7 +5,7 @@ const Experience = () => {
     const experiences = [
         {
             role: 'AWS Cloud Intern',
-            company: 'KnackForge Soft Solutions Pvt. Ltd.',
+            company: 'Aincuru Soft Solutions Pvt. Ltd.',
             type: 'Hybrid · Chennai, India',
             period: 'Aug 2025 – Sep 2025',
             points: [
